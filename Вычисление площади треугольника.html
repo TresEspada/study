@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вычисление площади треугольника</title>
+</head>
+<body>
+<h1 style="text-align: center; font-size: 2em;">Введите длины катетов:</h1>
+<br>
+  <center><input style= type="number" id="katet1" placeholder="Катет 1">
+  <input style=font-size: 1em; type="number" id="katet2" placeholder="Катет 2">
+  <button style=font-size: 1em; onclick="calculateArea()">Вычислить</button>
+  <p style=font-size: 1.5em; id="result"></p>
+<br>
+  <script>
+    function calculateArea() {
+      let katet1 = parseFloat(document.getElementById("katet1").value);
+      let katet2 = parseFloat(document.getElementById("katet2").value);
+      let area = (katet1 * katet2) / 2;
+      document.getElementById("result").innerHTML = "Площадь треугольника равна: " + area;
+    }
+  </script>
+</body>
+</html>
+

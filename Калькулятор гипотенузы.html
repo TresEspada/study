@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор гипотенузы</title>
+</head>
+<style>
+</style>
+<body>
+
+  <h1 style= text-align:center;>Калькулятор гипотенузы</h1>
+<br>
+  <center><label style= font-size: 1.3em; for="katet1">Катет 1:</label>
+  <input value=" "; style= font-size: 1em; text-align: center; type="number" id="katet1">
+
+  <label style= font-size: 1.3em; for="katet2">Катет 2:</label>
+  <input value=" "; style= font-size: 1em; text-align: center; type="number" id="katet2">
+
+  <button style="font-size: 1em;" onclick="calculateHypotenuse()">Рассчитать гипотенузу</button>
+<br>
+  <p style= font-size: 1.3em;>Гипотенуза: <span id="hypotenuse"></span></p>
+
+  <script>
+    function calculateHypotenuse() {
+      const katet1 = parseFloat(document.getElementById("katet1").value);
+      const katet2 = parseFloat(document.getElementById("katet2").value);
+      const hypotenuse = Math.sqrt(katet1 * katet1 + katet2 * katet2);
+      document.getElementById("hypotenuse").textContent = hypotenuse;
+    }
+  </script>
+</body>
+</html>
+

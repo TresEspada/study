@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Расстояние до начала координат</title>
+</head>
+<body>
+   <h1 style=text-align:center;>Расчёт расстояния до начала координат</h1>
+   <br>
+  <center>
+    <input type="number" id="x" placeholder="X">
+    <input type="number" id="y" placeholder="Y">
+    <button id="calculate">Рассчитать расстояние</button>
+    <p id="result"></p>
+  <script>
+    const xInput = document.getElementById('x');
+    const yInput = document.getElementById('y');
+    const calculateButton = document.getElementById('calculate');
+    const resultParagraph = document.getElementById('result');
+    calculateButton.addEventListener('click', () => {
+      const x = parseFloat(xInput.value);
+      const y = parseFloat(yInput.value);
+      const distance = Math.sqrt(x * x + y * y);
+      resultParagraph.textContent = `Расстояние до начала координат: ${distance}`;
+    });
+  </script>
+</body>
+</html>

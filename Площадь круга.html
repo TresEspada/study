@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Площадь круга</title>
+</head>
+<body>
+  <h1 style= text-align:center;>Рассчет площади круга</h1>
+<br>
+ <center> <label style=font-size: 1.3em; for="radius">Введите радиус круга:</label>
+  <input value=" "; style= text-align: center; type="number" id="radius" value="0">
+  <button onclick=calculateArea()>Рассчитать</button>
+
+  <p style= font-size: 1.2em;>Площадь круга: <span id="area"></span></p>
+
+  <script>
+    function calculateArea() {
+      let radius = parseFloat(document.getElementById("radius").value);
+      if (isNaN(radius)) {
+        alert("Введите корректное числовое значение для радиуса.");
+        return;
+      }
+      let area = Math.PI * Math.pow(radius, 2);
+      document.getElementById("area").textContent = area.toFixed(2);
+    }
+  </script>
+</body>
+</html>

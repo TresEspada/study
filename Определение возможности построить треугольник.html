@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+    <p>Определение возможности построить треугольник</p>
+    <input type="number" id="sideA" placeholder="Сторона A"><br>
+    <input type="number" id="sideB" placeholder="Сторона B"><br>
+    <input type="number" id="sideC" placeholder="Сторона C"><br>
+    <button onclick="canFormTriangle()">Проверить</button>
+    <p>Можно построить треугольник: <span id="triangleResult"></span></p>
+    <script>
+        function canFormTriangle() {
+            const a = parseFloat(document.getElementById('sideA').value);
+            const b = parseFloat(document.getElementById('sideB').value);
+            const c = parseFloat(document.getElementById('sideC').value);
+            
+            const canForm = (a + b > c) && (a + c > b) && (b + c > a);
+            document.getElementById('triangleResult').textContent = canForm ? "Да" : "Нет";
+        }
+    </script>
+</body>
+</html>

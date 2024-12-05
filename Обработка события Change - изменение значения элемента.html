@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Обработка события Change - изменение значения элемента</title>
+<script>
+function srec(obj)
+{obj.res.value=obj.num1.value* obj.num1.value}
+</script>
+</head>
+<body>
+<h1 style= text-align: center;>Вычисление площади квадрата</h1>
+<center><form name="form1">
+Сторона: <input type="text" size=10 name="num1"
+onChange="srec(form1)">
+<br>
+<br>
+Площадь: <input readonly type="text" size=10 name="res">
+<br>
+<br>
+<input type="reset" value=Обновить>
+</form>
+</body>
+</html>
